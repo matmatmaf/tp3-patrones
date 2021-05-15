@@ -22,10 +22,9 @@ Biblioteca >> agregarSocio: aSocio [
 
 { #category : #'as yet unclassified' }
 Biblioteca >> exportarSocios [
-"Retorna la representacion JSON de la coleccion de socios."
+	"Retorna la representacion JSON de la coleccion de socios."
 
-
-^ self exporter export:(self socios).
+	^ self exporter export: self socios
 ]
 
 { #category : #accessing }
