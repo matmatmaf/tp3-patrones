@@ -34,7 +34,7 @@ BibliotecaTest >> testAgregarSocio [
 { #category : #test }
 BibliotecaTest >> testExportarSocios [
 | arya tyron |
-miBiblioteca:= Biblioteca new: VoorheesExporter new.
+miBiblioteca:= Biblioteca new: Adapter new.
 arya:= Socio nombre:'Arya Stark' email:'needle@stark.com' legajo: '5234/5'.
 tyron:= Socio nombre:'Tyron Lannister' email:'tyron@thelannisters.com' legajo:'2345/2'.
 miBiblioteca agregarSocio: arya.
