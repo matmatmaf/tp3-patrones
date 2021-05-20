@@ -1,7 +1,7 @@
 Class {
 	#name : #Topografia,
 	#superclass : #Object,
-	#category : #'TP3-Topografia'
+	#category : #'TP3-Topografia-Topografia'
 }
 
 { #category : #inheriting }

@@ -1,7 +1,7 @@
 Class {
 	#name : #Agua,
 	#superclass : #Topografia,
-	#category : #'TP3-Topografia'
+	#category : #'TP3-Topografia-Topografia'
 }
 
 { #category : #'as yet unclassified' }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'topografias'
 	],
-	#category : #'TP3-Topografia'
+	#category : #'TP3-Topografia-Topografia'
 }
 
 { #category : #initializing }
