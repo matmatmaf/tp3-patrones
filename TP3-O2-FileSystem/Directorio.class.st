@@ -44,6 +44,22 @@ Directorio >> archivoMasGrandePropio [
 ]
 
 { #category : #private }
+Directorio >> archivoMasNuevo [
+	|masNuevo|
+	
+	masNuevo := (Archivo llamado: ''  creadoEl: '1900-01-01' asDate kBytes: 0).
+	
+	contenido do: [ :each | 
+		each class = self class 
+		ifTrue: [ 
+			(each archivoMasNuevo fechaCreacion) > (masNuevo fechaCreacion) 
+			ifTrue: [ masNuevo := each archivoMasNuevo  ]] 
+		ifFalse: [ (each fechaCreacion) > (masNuevo fechaCreacion) ifTrue: [ masNuevo := each. ] ] ].
+	
+	^ masNuevo 
+]
+
+{ #category : #private }
 Directorio >> getArchivosPropios [
 	^ contenido reject: [ :each | each class = self class ].
 	

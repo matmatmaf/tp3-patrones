@@ -9,6 +9,11 @@ Class {
 	#category : #'TP3-O2-FileSystem'
 }
 
+{ #category : #accessing }
+OO2FileSystem >> fechaCreacion [
+	^ fechaCreacion 
+]
+
 { #category : #initialization }
 OO2FileSystem >> llamado: unNombre creadoEl: aDate [
 	nombre := unNombre.
