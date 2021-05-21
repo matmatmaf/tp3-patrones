@@ -18,24 +18,62 @@ Directorio >> agregar: unObjetoDelFileSystem [
 ]
 
 { #category : #accessing }
+Directorio >> archivoMasGrande [
+	|archivoMax |
+	
+	archivoMax := self archivoMasGrandePropio.
+	self getSubdirectorios do: [ :each | 
+		archivoMax tamanio < (each archivoMasGrandePropio tamanio)
+			ifTrue: [archivoMax := each archivoMasGrandePropio]
+	].
+
+	^ archivoMax 
+	
+	
+]
+
+{ #category : #private }
+Directorio >> archivoMasGrandePropio [
+	|archivo archivosPropios|
+	
+	archivo := Archivo llamado: '' creadoEl: Date today kBytes: 0.
+	archivosPropios := self getArchivosPropios.
+	archivosPropios do: [ :each | archivo tamanio < each tamanio ifTrue: [ archivo := each ] ].
+	
+	^ archivo
+]
+
+{ #category : #private }
+Directorio >> getArchivosPropios [
+	^ contenido reject: [ :each | each class = self class ].
+	
+]
+
+{ #category : #private }
 Directorio >> getCantidadArchivos [
 	^ (contenido reject: [ :each | each class = self class ]) size
 ]
 
-{ #category : #accessing }
+{ #category : #private }
+Directorio >> getSubdirectorios [
+	^ contenido select: [ :each | each class = self class ].
+	
+]
+
+{ #category : #private }
 Directorio >> imprimir [
 	^	self getCantidadArchivos > 0 ifTrue:[
 			self imprimirNombre, self imprimirCantidadArchivos]
 		ifFalse: [ self imprimirNombre ]
 ]
 
-{ #category : #accessing }
+{ #category : #private }
 Directorio >> imprimirCantidadArchivos [
  	^ ' (', self getCantidadArchivos asString, ' archivos)'
 
 ]
 
-{ #category : #accessing }
+{ #category : #private }
 Directorio >> imprimirNombre [
 	^ '/', nombre
 ]
@@ -51,7 +89,7 @@ Directorio >> listadoDeContenido [
 	^ self listadoDeContenido: ''.
 ]
 
-{ #category : #accessing }
+{ #category : #private }
 Directorio >> listadoDeContenido: padresString [
 	| result padres directoriosInternos |
 	
@@ -60,7 +98,7 @@ Directorio >> listadoDeContenido: padresString [
 	
 	result << self imprimir .
 	
-	directoriosInternos := contenido select: [ :each | each class = self class ].
+	directoriosInternos := self getSubdirectorios.
 	directoriosInternos do: [ :each | result cr; << padres; << (each listadoDeContenido: padres) ].
 	
 	^ result contents
