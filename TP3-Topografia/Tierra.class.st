@@ -5,11 +5,11 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Tierra >> calcularProporcionDeAgua [
+Tierra >> proporcionDeAgua [
 	^ 0 
 ]
 
 { #category : #'as yet unclassified' }
-Tierra >> calcularProporcionDeTierra [
+Tierra >> proporcionDeTierra [
 	^ 1
 ]

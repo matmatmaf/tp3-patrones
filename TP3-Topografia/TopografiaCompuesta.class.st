@@ -14,28 +14,28 @@ TopografiaCompuesta class >> crearConArray: anArrayOfFourTopografias [
 		yourself
 ]
 
-{ #category : #inheriting }
-TopografiaCompuesta >> calcularProporcionDeAgua [
-	^ (topografias
-		inject: 0
-		into: [ :result :each | 
-			each calcularProporcionDeAgua + result ]) / topografias size
-]
-
-{ #category : #inheriting }
-TopografiaCompuesta >> calcularProporcionDeTierra [
-	^ (topografias
-		inject: 0
-		into: [ :result :each | each calcularProporcionDeTierra + result ])
-		/ topografias size
-]
-
 { #category : #initialization }
 TopografiaCompuesta >> esIgualTopografiaDeIgualTipo: unaTopografia [
 	1 to: 4 do: [ :each | 
 		((topografias at: each) esIgualA: (unaTopografia topografias at: each))
 			ifFalse: [ ^ false ] ].
 	^ true
+]
+
+{ #category : #inheriting }
+TopografiaCompuesta >> proporcionDeAgua [
+	^ (topografias
+		inject: 0
+		into: [ :result :each | 
+			each proporcionDeAgua + result ]) / topografias size
+]
+
+{ #category : #inheriting }
+TopografiaCompuesta >> proporcionDeTierra [
+	^ (topografias
+		inject: 0
+		into: [ :result :each | each proporcionDeTierra + result ])
+		/ topografias size
 ]
 
 { #category : #private }

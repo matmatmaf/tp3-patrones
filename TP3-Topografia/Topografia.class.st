@@ -5,16 +5,6 @@ Class {
 }
 
 { #category : #inheriting }
-Topografia >> calcularProporcionDeAgua [
-	self subclassResponsibility 
-]
-
-{ #category : #inheriting }
-Topografia >> calcularProporcionDeTierra [
-	self subclassResponsibility 
-]
-
-{ #category : #inheriting }
 Topografia >> esIgualA: unaTopografia [
 	^ self class == unaTopografia class
 		ifFalse: [ false ]
@@ -24,4 +14,14 @@ Topografia >> esIgualA: unaTopografia [
 { #category : #inheriting }
 Topografia >> esIgualTopografiaDeIgualTipo: unaTopografia [
 	^ true
+]
+
+{ #category : #inheriting }
+Topografia >> proporcionDeAgua [
+	self subclassResponsibility 
+]
+
+{ #category : #inheriting }
+Topografia >> proporcionDeTierra [
+	self subclassResponsibility 
 ]
