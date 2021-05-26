@@ -13,3 +13,8 @@ Agua >> proporcionDeAgua [
 Agua >> proporcionDeTierra [
 	^ 0
 ]
+
+{ #category : #'as yet unclassified' }
+Agua >> proporcionProductiva [
+	^ 0
+]

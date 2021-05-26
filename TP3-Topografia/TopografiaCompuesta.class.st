@@ -38,6 +38,14 @@ TopografiaCompuesta >> proporcionDeTierra [
 		/ topografias size
 ]
 
+{ #category : #'as yet unclassified' }
+TopografiaCompuesta >> proporcionProductiva [
+	^ (topografias
+		inject: 0
+		into: [ :result :each | each proporcionProductiva + result ])
+		/ topografias size
+]
+
 { #category : #private }
 TopografiaCompuesta >> topografias [
 	^ topografias 
