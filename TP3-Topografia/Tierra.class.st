@@ -15,6 +15,11 @@ Tierra >> proporcionDeTierra [
 ]
 
 { #category : #'as yet unclassified' }
+Tierra >> proporcionDesperdicio [
+	^ 0.05
+]
+
+{ #category : #'as yet unclassified' }
 Tierra >> proporcionProductiva [
 	^ 0.9
 ]

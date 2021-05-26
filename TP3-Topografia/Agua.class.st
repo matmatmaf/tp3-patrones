@@ -15,6 +15,11 @@ Agua >> proporcionDeTierra [
 ]
 
 { #category : #'as yet unclassified' }
+Agua >> proporcionDesperdicio [
+	^ 0.15
+]
+
+{ #category : #'as yet unclassified' }
 Agua >> proporcionProductiva [
 	^ 0
 ]

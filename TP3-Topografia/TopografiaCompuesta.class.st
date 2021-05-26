@@ -39,6 +39,18 @@ TopografiaCompuesta >> proporcionDeTierra [
 ]
 
 { #category : #'as yet unclassified' }
+TopografiaCompuesta >> proporcionDesperdicio [
+	| prom |
+	prom := (topografias
+		inject: 0
+		into: [ :result :each | each proporcionDesperdicio + result ])
+		/ topografias size.
+	(prom < 0.5)
+		ifTrue: [ ^ prom * 1.03 ];
+		ifFalse: [ ^ prom ]
+]
+
+{ #category : #'as yet unclassified' }
 TopografiaCompuesta >> proporcionProductiva [
 	^ (topografias
 		inject: 0
