@@ -31,5 +31,5 @@ Dispositivo >> initialize [
 
 { #category : #commands }
 Dispositivo >> send: aString [
-	self connection sendData: aString crc: (crcCalculator crcFor: aString)
+	connection sendData: aString crc: (crcCalculator crcFor: aString)
 ]

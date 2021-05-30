@@ -19,6 +19,6 @@ Connection4G >> symb [
 
 { #category : #'as yet unclassified' }
 Connection4G >> trasmit: aDataString crc: aInt [
-	Transcript show: 'Se envia la cadena: ', aDataString, ' con crc: ', aInt, ' con una conexion 4G';
+	Transcript show: 'Se envia la cadena: ', aDataString, ' con crc: ', (aInt asString) , ' con una conexion 4G';
 	cr.
 ]
