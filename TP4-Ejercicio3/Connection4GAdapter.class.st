@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'connection4G'
 	],
-	#category : #'TP4-Ejercicio3'
+	#category : #'TP4-Ejercicio3-dominio'
 }
 
 { #category : #'as yet unclassified' }

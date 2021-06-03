@@ -1,7 +1,7 @@
 Class {
 	#name : #Connection,
 	#superclass : #Object,
-	#category : #'TP4-Ejercicio3'
+	#category : #'TP4-Ejercicio3-dominio'
 }
 
 { #category : #'as yet unclassified' }

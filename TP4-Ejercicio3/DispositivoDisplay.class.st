@@ -4,7 +4,7 @@ Se llama DispositivoDisplay en vez de Display porque la clase Display existe en 
 Class {
 	#name : #DispositivoDisplay,
 	#superclass : #Object,
-	#category : #'TP4-Ejercicio3'
+	#category : #'TP4-Ejercicio3-dominio'
 }
 
 { #category : #'as yet unclassified' }
