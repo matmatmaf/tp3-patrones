@@ -7,7 +7,7 @@ Class {
 		'display',
 		'ringer'
 	],
-	#category : #'TP4-Ejercicio3'
+	#category : #'TP4-Ejercicio3-dominio'
 }
 
 { #category : #commands }
@@ -20,7 +20,8 @@ Dispositivo >> conectarCon: aConnection [
 
 { #category : #commands }
 Dispositivo >> configurarCRC: aCRC_Calculator [
-	crcCalculator := aCRC_Calculator 
+	crcCalculator := aCRC_Calculator.
+	Transcript show: 'Se configuro: ', crcCalculator className; cr.
 ]
 
 { #category : #commands }

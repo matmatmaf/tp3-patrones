@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'pict'
 	],
-	#category : #'TP4-Ejercicio3'
+	#category : #'TP4-Ejercicio3-dominio'
 }
 
 { #category : #'as yet unclassified' }
@@ -19,6 +19,6 @@ WIFIConn >> pict [
 
 { #category : #'as yet unclassified' }
 WIFIConn >> sendData: aDataString crc: aInt [
-	Transcript show: 'Se envia la cadena: ', aDataString, ' con crc: ', aInt, ' con una conexion WIFI';
+	Transcript show: ('Se envia la cadena: "', aDataString, '" con crc: ', (aInt asString), ' con una conexion WIFI');
 	cr.
 ]
