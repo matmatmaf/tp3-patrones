@@ -10,6 +10,11 @@ Class {
 	#category : #'TP4-Ejercicio3-dominio'
 }
 
+{ #category : #initializing }
+Dispositivo class >> crearConConexion: unaConexion unCRCCalculator: unCRCCalculator [
+	^ self new conectarCon: unaConexion; configurarCRC: unCRCCalculator yourself
+]
+
 { #category : #commands }
 Dispositivo >> conectarCon: aConnection [
 	connection := aConnection.
